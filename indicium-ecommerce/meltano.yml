@@ -1,0 +1,65 @@
+version: 1
+default_environment: dev
+project_id: aa998ba2-db5f-489a-a8e4-24f130c7a43b
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      database: northwind
+      host: localhost
+      password: thewindisblowing
+      port: 5432
+      user: northwind_user
+      default_replication_method: LOG_BASED
+      stream_maps:
+        public-products:
+          unit_price: float(unit_price)
+          __alias__: products
+        public-orders:
+          freight: float(freight)
+          __alias__: orders
+        public-categories:
+          __alias__: categories
+        public-customers:
+          __alias__: customers
+        public-employee_territories:
+          __alias__: employee_territories
+        public-employees:
+          __alias__: employees
+        public-region:
+          __alias__: region
+        public-shippers:
+          __alias__: shippers
+        public-suppliers:
+          __alias__: suppliers
+        public-territories:
+          __alias__: territories
+        public-us_states:
+          __alias__: us_states
+    select:
+    - public-*.*
+
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files: [{entity: orders_details, path: ../data/order_details.csv, keys: [order_id,
+            product_id, unit_price, quantity, discount], delimiter: ','}]
+  loaders:
+  - name: target-parquet
+    variant: hotgluexyz
+    pip_url: git+https://gitlab.com/hotglue/target-parquet.git
+    config:
+      filepath: ./data/postgres/2024-01-01/
+  - name: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+    config:
+      output_path: ./data/csv/2024-01-01/
+    

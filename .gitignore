@@ -1,4 +1,9 @@
 /venv
 /.meltano
 .env
+/indicium-ecommerce/venv/
+.venv
+logs/
+.meltano
+data/
 dbdata/
