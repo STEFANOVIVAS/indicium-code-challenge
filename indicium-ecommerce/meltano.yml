@@ -24,6 +24,7 @@ plugins:
         public-orders:
           freight: float(freight)
           __alias__: orders
+
         public-categories:
           __alias__: categories
         public-customers:
@@ -45,21 +46,78 @@ plugins:
     select:
     - public-*.*
 
-  - name: tap-csv
+
+  - name: tap-csv-from-csv
+    inherit_from: tap-csv
     variant: meltanolabs
     pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
     config:
       files: [{entity: orders_details, path: ../data/order_details.csv, keys: [order_id,
             product_id, unit_price, quantity, discount], delimiter: ','}]
-  loaders:
-  - name: target-parquet
-    variant: hotgluexyz
-    pip_url: git+https://gitlab.com/hotglue/target-parquet.git
+  - name: tap-csv-to-postgres
+    inherit_from: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
     config:
-      filepath: ./data/postgres/2024-01-01/
-  - name: target-csv
+      files: [{entity: orders, path: ./data/postgres/2024-01-01/orders.csv, keys: [
+            order_id, customer_id, employee_id, order_date, required_date, shipped_date,
+            ship_via, freight, ship_name, ship_address, ship_city, ship_region, ship_postal_code,
+            ship_country], delimiter: ','}, {entity: orders_details, path: ../data/order_details.csv,
+          keys: [order_id, product_id, unit_price, quantity, discount], delimiter: ','}]
+  loaders:
+
+  - name: target-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-target-postgres
+    config:
+      database: ecommerce
+      host: localhost
+      password: stefanovivas
+      port: 5433
+      user: stefano
+      default_replication_method: LOG_BASED
+      default_target_schema: ecommerce
+
+  - name: target-csv-from-postgres
+    inherit_from: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+    config:
+      output_path: ./data/postgres/2024-01-01/
+
+  - name: target-csv-from-csv
+    inherit_from: target-csv
     variant: meltanolabs
     pip_url: git+https://github.com/MeltanoLabs/target-csv.git
     config:
       output_path: ./data/csv/2024-01-01/
-    
+
+  - name: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+  
+  orchestrators:
+  - name: airflow
+    variant: apache
+    pip_url: apache-airflow==2.1.2 --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.1.2/constraints-3.9.txt
+  
+  files:
+  - name: files-airflow
+    variant: meltano
+    pip_url: git+https://github.com/meltano/files-airflow.git
+  
+  utilities:
+  - name: airflow
+    variant: apache
+    pip_url: git+https://github.com/meltano/airflow-ext.git@main apache-airflow==2.8.1
+      --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-no-providers-${MELTANO__PYTHON_VERSION}.txt
+jobs:
+- name: tap-postgres-csv-to-target-postgres
+  tasks:
+  - tap-postgres target-csv-from-postgres tap-csv-from-csv target-csv-from-csv
+  - tap-csv-to-postgres target-postgres
+
+schedules:
+- name: daily-ecommerce-load
+  interval: '@daily'
+  job: tap-postgres-csv-to-target-postgres
