@@ -1,0 +1,623 @@
+2025-01-26 23:04:11,978 INFO - Task context logging is enabled
+2025-01-26 23:04:11,979 INFO - Loaded executor: SequentialExecutor
+2025-01-26 23:04:12,018 INFO - Starting the scheduler
+2025-01-26 23:04:12,019 INFO - Processing each file at most -1 times
+2025-01-26 23:04:12,025 INFO - Launched DagFileProcessorManager with pid: 52591
+2025-01-26 23:04:12,027 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:04:12,030 INFO - Configured default timezone UTC
+2025-01-26 23:09:12,106 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:14:12,158 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:19:12,207 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:24:12,263 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:29:12,317 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:34:12,186 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:39:12,220 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:41:01,182 ERROR - Exception when executing SchedulerJob._run_scheduler_loop
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2025-01-26 23:41:01,189 INFO - Sending Signals.SIGTERM to group 52591. PIDs of all processes in the group: []
+2025-01-26 23:41:01,190 INFO - Sending the signal Signals.SIGTERM to group 52591
+2025-01-26 23:41:01,190 INFO - Sending the signal Signals.SIGTERM to process 52591 as process group is missing.
+2025-01-26 23:41:01,190 INFO - Exited execute loop
+2025-01-26 23:41:01,191 ERROR - Exception when running scheduler job
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/job.py", line 393, in run_job
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/job.py", line 422, in execute_job
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 855, in _execute
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 987, in _run_scheduler_loop
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1061, in _do_scheduling
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/retries.py", line 91, in wrapped_function
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 347, in __iter__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 325, in iter
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/tenacity/__init__.py", line 158, in reraise
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/retries.py", line 100, in wrapped_function
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/scheduler_job_runner.py", line 1127, in _create_dagruns_for_dags
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/models/dag.py", line 3742, in dags_needing_dagruns
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 52, in _run_scheduler_job
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/session.py", line 79, in wrapper
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/job.py", line 395, in run_job
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/job.py", line 240, in complete_execution
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/api_internal/internal_api_call.py", line 114, in wrapper
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/session.py", line 76, in wrapper
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/jobs/job.py", line 332, in _update_in_db
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3056, in merge
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 3136, in _merge
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2853, in get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 2975, in _get_impl
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/loading.py", line 530, in load_on_pk_identity
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 1555, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/future/engine.py", line 412, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/impl.py", line 256, in _do_get
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2025-01-26 23:47:46,306 INFO - Task context logging is enabled
+2025-01-26 23:47:46,308 INFO - Loaded executor: SequentialExecutor
+2025-01-26 23:47:46,372 INFO - Starting the scheduler
+2025-01-26 23:47:46,373 INFO - Processing each file at most -1 times
+2025-01-26 23:47:46,380 INFO - Launched DagFileProcessorManager with pid: 63515
+2025-01-26 23:47:46,382 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-26 23:47:46,387 INFO - Configured default timezone UTC
+2025-01-26 23:47:49,658 INFO - DAG meltano_schedule_test is at (or above) max_active_runs (1 of 1), not creating any more runs
+2025-01-26 23:47:49,669 INFO - DAG meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres is at (or above) max_active_runs (1 of 1), not creating any more runs
+2025-01-26 23:47:49,976 INFO - 2 tasks up for execution:
+	<TaskInstance: meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres.meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0 scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+2025-01-26 23:47:49,976 INFO - DAG meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres has 0/16 running and queued tasks
+2025-01-26 23:47:49,976 INFO - DAG meltano_schedule_test has 0/16 running and queued tasks
+2025-01-26 23:47:49,977 INFO - Setting the following tasks to queued state:
+	<TaskInstance: meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres.meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0 scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+2025-01-26 23:47:49,981 WARNING - cannot record scheduled_duration for task meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0 because previous state change time has not been saved
+2025-01-26 23:47:49,981 WARNING - cannot record scheduled_duration for task extract_load because previous state change time has not been saved
+2025-01-26 23:47:49,982 INFO - Sending TaskInstanceKey(dag_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', task_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-26 23:47:49,983 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:47:49,983 INFO - Sending TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-26 23:47:49,984 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:47:49,999 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:48:06,436 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:48:21,870 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', task_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1)
+2025-01-26 23:48:21,871 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1)
+2025-01-26 23:48:21,881 INFO - TaskInstance Finished: dag_id=meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres, task_id=meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task0, run_id=scheduled__2025-01-27T01:00:00+00:00, map_index=-1, run_start_date=2025-01-27 02:47:54.924807+00:00, run_end_date=2025-01-27 02:48:05.820729+00:00, run_duration=10.895922, state=success, executor_state=success, try_number=1, max_tries=1, job_id=2, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 02:47:49.978261+00:00, queued_by_job_id=1, pid=63550
+2025-01-26 23:48:21,882 INFO - TaskInstance Finished: dag_id=meltano_schedule_test, task_id=extract_load, run_id=scheduled__2025-01-27T01:00:00+00:00, map_index=-1, run_start_date=2025-01-27 02:48:10.036396+00:00, run_end_date=2025-01-27 02:48:21.244475+00:00, run_duration=11.208079, state=success, executor_state=success, try_number=1, max_tries=1, job_id=3, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 02:47:49.978261+00:00, queued_by_job_id=1, pid=63639
+2025-01-26 23:48:24,525 INFO - Marking run <DagRun meltano_schedule_test @ 2025-01-27 01:00:00+00:00: scheduled__2025-01-27T01:00:00+00:00, state:running, queued_at: 2025-01-27 02:47:49.641638+00:00. externally triggered: False> successful
+2025-01-26 23:48:24,526 INFO - DagRun Finished: dag_id=meltano_schedule_test, execution_date=2025-01-27 01:00:00+00:00, run_id=scheduled__2025-01-27T01:00:00+00:00, run_start_date=2025-01-27 02:47:49.711226+00:00, run_end_date=2025-01-27 02:48:24.526764+00:00, run_duration=34.815538, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-01-27 01:00:00+00:00, data_interval_end=2025-01-27 02:00:00+00:00, dag_hash=ac090821216f0e00ae72ad1cc8c1cf43
+2025-01-26 23:48:24,534 INFO - Setting next_dagrun for meltano_schedule_test to 2025-01-27 02:00:00+00:00, run_after=2025-01-27 03:00:00+00:00
+2025-01-26 23:48:24,565 INFO - 1 tasks up for execution:
+	<TaskInstance: meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres.meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1 scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+2025-01-26 23:48:24,566 INFO - DAG meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres has 0/16 running and queued tasks
+2025-01-26 23:48:24,566 INFO - Setting the following tasks to queued state:
+	<TaskInstance: meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres.meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1 scheduled__2025-01-27T01:00:00+00:00 [scheduled]>
+2025-01-26 23:48:24,569 WARNING - cannot record scheduled_duration for task meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1 because previous state change time has not been saved
+2025-01-26 23:48:24,570 INFO - Sending TaskInstanceKey(dag_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', task_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-26 23:48:24,570 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:48:24,592 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', 'meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1', 'scheduled__2025-01-27T01:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-26 23:48:37,875 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres', task_id='meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1', run_id='scheduled__2025-01-27T01:00:00+00:00', try_number=1, map_index=-1)
+2025-01-26 23:48:37,884 INFO - TaskInstance Finished: dag_id=meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres, task_id=meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres_task1, run_id=scheduled__2025-01-27T01:00:00+00:00, map_index=-1, run_start_date=2025-01-27 02:48:28.799189+00:00, run_end_date=2025-01-27 02:48:37.301125+00:00, run_duration=8.501936, state=success, executor_state=success, try_number=1, max_tries=1, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 02:48:24.567284+00:00, queued_by_job_id=1, pid=63766
+2025-01-26 23:48:37,968 INFO - Marking run <DagRun meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres @ 2025-01-27 01:00:00+00:00: scheduled__2025-01-27T01:00:00+00:00, state:running, queued_at: 2025-01-27 02:47:49.663591+00:00. externally triggered: False> successful
+2025-01-26 23:48:37,969 INFO - DagRun Finished: dag_id=meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres, execution_date=2025-01-27 01:00:00+00:00, run_id=scheduled__2025-01-27T01:00:00+00:00, run_start_date=2025-01-27 02:47:49.710663+00:00, run_end_date=2025-01-27 02:48:37.969558+00:00, run_duration=48.258895, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-01-27 01:00:00+00:00, data_interval_end=2025-01-27 02:00:00+00:00, dag_hash=1b58c6dacaab1b8aa526edf3097ce7db
+2025-01-26 23:48:37,975 INFO - Setting next_dagrun for meltano_daily-indicium-load_pipeline-csv-and-postgres-to-local-target-postgres to 2025-01-27 02:00:00+00:00, run_after=2025-01-27 03:00:00+00:00
+2025-01-27 16:36:01,940 INFO - Task context logging is enabled
+2025-01-27 16:36:01,943 INFO - Loaded executor: SequentialExecutor
+2025-01-27 16:36:02,000 INFO - Starting the scheduler
+2025-01-27 16:36:02,002 INFO - Processing each file at most -1 times
+2025-01-27 16:36:02,010 INFO - Launched DagFileProcessorManager with pid: 5032
+2025-01-27 16:36:02,012 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 16:36:02,016 INFO - Configured default timezone UTC
+2025-01-27 16:36:02,036 INFO - Marked 1 SchedulerJob instances as failed
+2025-01-27 16:41:00,777 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 16:44:17,177 INFO - DAG meltano_schedule_test is at (or above) max_active_runs (1 of 1), not creating any more runs
+2025-01-27 16:44:17,264 INFO - 1 tasks up for execution:
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T18:00:00+00:00 [scheduled]>
+2025-01-27 16:44:17,265 INFO - DAG meltano_schedule_test has 0/16 running and queued tasks
+2025-01-27 16:44:17,265 INFO - Setting the following tasks to queued state:
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T18:00:00+00:00 [scheduled]>
+2025-01-27 16:44:17,269 WARNING - cannot record scheduled_duration for task extract_load because previous state change time has not been saved
+2025-01-27 16:44:17,270 INFO - Sending TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T18:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 16:44:17,270 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T18:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:44:17,282 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T18:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:44:29,647 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T18:00:00+00:00', try_number=1, map_index=-1)
+2025-01-27 16:44:29,659 INFO - TaskInstance Finished: dag_id=meltano_schedule_test, task_id=extract_load, run_id=scheduled__2025-01-27T18:00:00+00:00, map_index=-1, run_start_date=2025-01-27 19:44:22.456465+00:00, run_end_date=2025-01-27 19:44:28.852724+00:00, run_duration=6.396259, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 19:44:17.266579+00:00, queued_by_job_id=5, pid=7569
+2025-01-27 16:45:59,466 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 16:47:35,536 INFO - 1 tasks up for execution:
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T18:00:00+00:00 [scheduled]>
+2025-01-27 16:47:35,537 INFO - DAG meltano_schedule_test has 0/16 running and queued tasks
+2025-01-27 16:47:35,537 INFO - Setting the following tasks to queued state:
+	<TaskInstance: meltano_schedule_test.extract_load scheduled__2025-01-27T18:00:00+00:00 [scheduled]>
+2025-01-27 16:47:35,539 INFO - Sending TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T18:00:00+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 16:47:35,540 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T18:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:47:35,551 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'scheduled__2025-01-27T18:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:47:52,143 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='scheduled__2025-01-27T18:00:00+00:00', try_number=2, map_index=-1)
+2025-01-27 16:47:52,149 INFO - TaskInstance Finished: dag_id=meltano_schedule_test, task_id=extract_load, run_id=scheduled__2025-01-27T18:00:00+00:00, map_index=-1, run_start_date=2025-01-27 19:47:40.556567+00:00, run_end_date=2025-01-27 19:47:51.566598+00:00, run_duration=11.010031, state=success, executor_state=success, try_number=2, max_tries=2, job_id=7, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 19:47:35.538135+00:00, queued_by_job_id=5, pid=8111
+2025-01-27 16:47:54,320 INFO - Marking run <DagRun meltano_schedule_test @ 2025-01-27 18:00:00+00:00: scheduled__2025-01-27T18:00:00+00:00, state:running, queued_at: 2025-01-27 19:44:17.165193+00:00. externally triggered: False> successful
+2025-01-27 16:47:54,322 INFO - DagRun Finished: dag_id=meltano_schedule_test, execution_date=2025-01-27 18:00:00+00:00, run_id=scheduled__2025-01-27T18:00:00+00:00, run_start_date=2025-01-27 19:44:17.201436+00:00, run_end_date=2025-01-27 19:47:54.322088+00:00, run_duration=217.120652, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-01-27 18:00:00+00:00, data_interval_end=2025-01-27 19:00:00+00:00, dag_hash=ac090821216f0e00ae72ad1cc8c1cf43
+2025-01-27 16:47:54,327 INFO - DAG meltano_schedule_test is at (or above) max_active_runs (1 of 1), not creating any more runs
+2025-01-27 16:47:55,425 INFO - 1 tasks up for execution:
+	<TaskInstance: meltano_schedule_test.extract_load manual__2025-01-27T19:46:22.682884+00:00 [scheduled]>
+2025-01-27 16:47:55,425 INFO - DAG meltano_schedule_test has 0/16 running and queued tasks
+2025-01-27 16:47:55,426 INFO - Setting the following tasks to queued state:
+	<TaskInstance: meltano_schedule_test.extract_load manual__2025-01-27T19:46:22.682884+00:00 [scheduled]>
+2025-01-27 16:47:55,428 WARNING - cannot record scheduled_duration for task extract_load because previous state change time has not been saved
+2025-01-27 16:47:55,429 INFO - Sending TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='manual__2025-01-27T19:46:22.682884+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 16:47:55,429 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'manual__2025-01-27T19:46:22.682884+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:47:55,443 INFO - Executing command: ['airflow', 'tasks', 'run', 'meltano_schedule_test', 'extract_load', 'manual__2025-01-27T19:46:22.682884+00:00', '--local', '--subdir', 'DAGS_FOLDER/meltano_dag_generator.py']
+2025-01-27 16:48:09,091 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='meltano_schedule_test', task_id='extract_load', run_id='manual__2025-01-27T19:46:22.682884+00:00', try_number=1, map_index=-1)
+2025-01-27 16:48:09,096 INFO - TaskInstance Finished: dag_id=meltano_schedule_test, task_id=extract_load, run_id=manual__2025-01-27T19:46:22.682884+00:00, map_index=-1, run_start_date=2025-01-27 19:47:59.354392+00:00, run_end_date=2025-01-27 19:48:08.546921+00:00, run_duration=9.192529, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 19:47:55.427231+00:00, queued_by_job_id=5, pid=8197
+2025-01-27 16:48:09,186 INFO - Marking run <DagRun meltano_schedule_test @ 2025-01-27 19:46:22.682884+00:00: manual__2025-01-27T19:46:22.682884+00:00, state:running, queued_at: 2025-01-27 19:46:22.704274+00:00. externally triggered: True> successful
+2025-01-27 16:48:09,186 INFO - DagRun Finished: dag_id=meltano_schedule_test, execution_date=2025-01-27 19:46:22.682884+00:00, run_id=manual__2025-01-27T19:46:22.682884+00:00, run_start_date=2025-01-27 19:47:55.381192+00:00, run_end_date=2025-01-27 19:48:09.186712+00:00, run_duration=13.80552, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-01-27 18:00:00+00:00, data_interval_end=2025-01-27 19:00:00+00:00, dag_hash=ac090821216f0e00ae72ad1cc8c1cf43
+2025-01-27 16:50:59,508 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 16:55:58,183 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:00:58,251 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:05:56,931 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:09:09,425 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:09:09,426 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:09:09,426 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 17:09:09,427 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:09:09,430 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 17:09:09,430 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 17:09:09,431 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:09:09,431 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:09:09,432 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:09:09,433 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:09:09,442 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:09:15,913 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:09:23,993 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1)
+2025-01-27 17:09:23,994 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1)
+2025-01-27 17:09:24,020 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:09:11.205255+00:00, run_end_date=2025-01-27 20:09:15.434349+00:00, run_duration=4.229094, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=9, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:09:09.428562+00:00, queued_by_job_id=5, pid=12307
+2025-01-27 17:09:24,021 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:09:17.330762+00:00, run_end_date=2025-01-27 20:09:23.165458+00:00, run_duration=5.834696, state=success, executor_state=success, try_number=1, max_tries=3, job_id=10, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:09:09.428562+00:00, queued_by_job_id=5, pid=12327
+2025-01-27 17:10:57,042 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:12:15,983 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:12:15,984 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:12:15,984 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:12:15,987 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=2, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:12:15,987 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:12:15,998 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:12:24,140 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=2, map_index=-1)
+2025-01-27 17:12:24,145 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:12:18.048657+00:00, run_end_date=2025-01-27 20:12:23.371483+00:00, run_duration=5.322826, state=up_for_retry, executor_state=success, try_number=2, max_tries=3, job_id=11, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:12:15.985299+00:00, queued_by_job_id=5, pid=12868
+2025-01-27 17:15:24,424 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:15:24,425 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:15:24,426 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:15:24,432 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=3, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:15:24,432 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:15:24,447 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:15:33,265 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=3, map_index=-1)
+2025-01-27 17:15:33,271 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:15:26.814126+00:00, run_end_date=2025-01-27 20:15:32.663870+00:00, run_duration=5.849744, state=up_for_retry, executor_state=success, try_number=3, max_tries=3, job_id=12, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:15:24.427653+00:00, queued_by_job_id=5, pid=13517
+2025-01-27 17:15:57,100 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:18:16,477 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+2025-01-27 17:18:16,477 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:18:16,478 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 17:18:16,478 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+2025-01-27 17:18:16,480 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 17:18:16,480 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 17:18:16,481 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:18:16,481 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:16,481 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:18:16,481 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:16,492 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:23,878 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:32,869 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1)
+2025-01-27 17:18:32,870 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1)
+2025-01-27 17:18:32,879 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:18:15.831622+00:00, map_index=-1, run_start_date=2025-01-27 20:18:18.196934+00:00, run_end_date=2025-01-27 20:18:23.294921+00:00, run_duration=5.097987, state=success, executor_state=success, try_number=1, max_tries=3, job_id=13, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:18:16.479093+00:00, queued_by_job_id=5, pid=14104
+2025-01-27 17:18:32,880 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T20:18:15.831622+00:00, map_index=-1, run_start_date=2025-01-27 20:18:26.009665+00:00, run_end_date=2025-01-27 20:18:32.290531+00:00, run_duration=6.280866, state=success, executor_state=success, try_number=1, max_tries=3, job_id=14, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:18:16.479093+00:00, queued_by_job_id=5, pid=14146
+2025-01-27 17:18:35,821 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+2025-01-27 17:18:35,822 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:18:35,822 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 17:18:35,822 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:18:15.831622+00:00 [scheduled]>
+2025-01-27 17:18:35,826 WARNING - cannot record scheduled_duration for task extract_from_csv_load_postgres because previous state change time has not been saved
+2025-01-27 17:18:35,827 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=4, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:18:35,827 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:35,828 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 17:18:35,828 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:35,838 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:43,466 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:18:15.831622+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:55,552 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=4, map_index=-1)
+2025-01-27 17:18:55,553 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:18:15.831622+00:00', try_number=1, map_index=-1)
+2025-01-27 17:18:55,564 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_postgres, run_id=manual__2025-01-27T20:18:15.831622+00:00, map_index=-1, run_start_date=2025-01-27 20:18:45.653010+00:00, run_end_date=2025-01-27 20:18:54.981488+00:00, run_duration=9.328478, state=success, executor_state=success, try_number=1, max_tries=3, job_id=16, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 20:18:35.823720+00:00, queued_by_job_id=5, pid=14231
+2025-01-27 17:18:55,565 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:18:37.931367+00:00, run_end_date=2025-01-27 20:18:42.903737+00:00, run_duration=4.97237, state=success, executor_state=success, try_number=4, max_tries=3, job_id=15, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:18:35.823720+00:00, queued_by_job_id=5, pid=14192
+2025-01-27 17:18:55,869 INFO - Marking run <DagRun northwin_meltano_pipeline @ 2025-01-27 20:18:15.831622+00:00: manual__2025-01-27T20:18:15.831622+00:00, state:running, queued_at: 2025-01-27 20:18:15.851137+00:00. externally triggered: True> successful
+2025-01-27 17:18:55,870 INFO - DagRun Finished: dag_id=northwin_meltano_pipeline, execution_date=2025-01-27 20:18:15.831622+00:00, run_id=manual__2025-01-27T20:18:15.831622+00:00, run_start_date=2025-01-27 20:18:16.431441+00:00, run_end_date=2025-01-27 20:18:55.870199+00:00, run_duration=39.438758, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=b2225949f66fd87f5b12f0045741e646
+2025-01-27 17:18:55,915 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:18:55,915 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:18:55,915 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:09:08.885346+00:00 [scheduled]>
+2025-01-27 17:18:55,917 WARNING - cannot record scheduled_duration for task extract_from_csv_load_postgres because previous state change time has not been saved
+2025-01-27 17:18:55,918 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 17:18:55,918 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:18:55,930 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:09:08.885346+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:19:06,821 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:09:08.885346+00:00', try_number=1, map_index=-1)
+2025-01-27 17:19:06,825 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_postgres, run_id=manual__2025-01-27T20:09:08.885346+00:00, map_index=-1, run_start_date=2025-01-27 20:18:58.090715+00:00, run_end_date=2025-01-27 20:19:06.311649+00:00, run_duration=8.220934, state=success, executor_state=success, try_number=1, max_tries=3, job_id=17, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 20:18:55.916356+00:00, queued_by_job_id=5, pid=14303
+2025-01-27 17:19:55,647 INFO - Marking run <DagRun northwin_meltano_pipeline @ 2025-01-27 20:09:08.885346+00:00: manual__2025-01-27T20:09:08.885346+00:00, state:running, queued_at: 2025-01-27 20:09:08.909351+00:00. externally triggered: True> successful
+2025-01-27 17:19:55,648 INFO - DagRun Finished: dag_id=northwin_meltano_pipeline, execution_date=2025-01-27 20:09:08.885346+00:00, run_id=manual__2025-01-27T20:09:08.885346+00:00, run_start_date=2025-01-27 20:09:09.382546+00:00, run_end_date=2025-01-27 20:19:55.647916+00:00, run_duration=646.26537, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=b2225949f66fd87f5b12f0045741e646
+2025-01-27 17:20:55,749 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:25:55,772 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:30:54,408 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:35:54,457 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:38:38,550 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:38:38,550 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:38:38,551 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 17:38:38,551 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:38:38,553 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 17:38:38,554 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 17:38:38,555 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:38:38,555 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:38:38,556 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:38:38,556 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:38:38,568 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:38:46,993 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:38:56,781 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=1, map_index=-1)
+2025-01-27 17:38:56,781 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=1, map_index=-1)
+2025-01-27 17:38:56,788 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:38:37.987846+00:00, map_index=-1, run_start_date=2025-01-27 20:38:40.914094+00:00, run_end_date=2025-01-27 20:38:46.434283+00:00, run_duration=5.520189, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=18, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:38:38.552066+00:00, queued_by_job_id=5, pid=18946
+2025-01-27 17:38:56,789 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T20:38:37.987846+00:00, map_index=-1, run_start_date=2025-01-27 20:38:49.105811+00:00, run_end_date=2025-01-27 20:38:56.179890+00:00, run_duration=7.074079, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=19, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:38:38.552066+00:00, queued_by_job_id=5, pid=18984
+2025-01-27 17:39:26,950 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:39:26,950 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:39:26,950 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:39:26,952 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=2, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:39:26,952 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:39:26,961 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:39:34,049 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=2, map_index=-1)
+2025-01-27 17:39:34,055 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:38:37.987846+00:00, map_index=-1, run_start_date=2025-01-27 20:39:29.086114+00:00, run_end_date=2025-01-27 20:39:33.514374+00:00, run_duration=4.42826, state=up_for_retry, executor_state=success, try_number=2, max_tries=4, job_id=20, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:39:26.951252+00:00, queued_by_job_id=5, pid=19082
+2025-01-27 17:39:34,378 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:39:34,379 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:39:34,379 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:38:37.987846+00:00 [scheduled]>
+2025-01-27 17:39:34,381 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=2, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:39:34,381 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:39:34,392 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:38:37.987846+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:39:43,137 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:38:37.987846+00:00', try_number=2, map_index=-1)
+2025-01-27 17:39:43,144 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T20:38:37.987846+00:00, map_index=-1, run_start_date=2025-01-27 20:39:36.129478+00:00, run_end_date=2025-01-27 20:39:42.586371+00:00, run_duration=6.456893, state=up_for_retry, executor_state=success, try_number=2, max_tries=4, job_id=21, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:39:34.379840+00:00, queued_by_job_id=5, pid=19120
+2025-01-27 17:40:54,527 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 17:41:17,324 ERROR - Marking run <DagRun northwin_meltano_pipeline @ 2025-01-27 20:38:37.987846+00:00: manual__2025-01-27T20:38:37.987846+00:00, state:running, queued_at: 2025-01-27 20:38:38.008061+00:00. externally triggered: True> failed
+2025-01-27 17:41:17,326 INFO - DagRun Finished: dag_id=northwin_meltano_pipeline, execution_date=2025-01-27 20:38:37.987846+00:00, run_id=manual__2025-01-27T20:38:37.987846+00:00, run_start_date=2025-01-27 20:38:38.489567+00:00, run_end_date=2025-01-27 20:41:17.325958+00:00, run_duration=158.836391, state=failed, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=b2225949f66fd87f5b12f0045741e646
+2025-01-27 17:41:26,862 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+2025-01-27 17:41:26,863 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:41:26,863 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 17:41:26,863 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+2025-01-27 17:41:26,866 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 17:41:26,866 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 17:41:26,867 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:41:26,867 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:26,868 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 17:41:26,868 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:26,877 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:33,792 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:42,662 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1)
+2025-01-27 17:41:42,663 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1)
+2025-01-27 17:41:42,667 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T20:41:25.608518+00:00, map_index=-1, run_start_date=2025-01-27 20:41:28.583115+00:00, run_end_date=2025-01-27 20:41:33.236142+00:00, run_duration=4.653027, state=success, executor_state=success, try_number=1, max_tries=3, job_id=22, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:41:26.864794+00:00, queued_by_job_id=5, pid=19461
+2025-01-27 17:41:42,668 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T20:41:25.608518+00:00, map_index=-1, run_start_date=2025-01-27 20:41:35.876014+00:00, run_end_date=2025-01-27 20:41:42.130107+00:00, run_duration=6.254093, state=success, executor_state=success, try_number=1, max_tries=3, job_id=23, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 20:41:26.864794+00:00, queued_by_job_id=5, pid=19492
+2025-01-27 17:41:42,993 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+2025-01-27 17:41:42,993 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 17:41:42,994 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T20:41:25.608518+00:00 [scheduled]>
+2025-01-27 17:41:42,996 WARNING - cannot record scheduled_duration for task extract_from_csv_load_postgres because previous state change time has not been saved
+2025-01-27 17:41:42,996 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 17:41:42,997 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:43,008 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T20:41:25.608518+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 17:41:54,093 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T20:41:25.608518+00:00', try_number=1, map_index=-1)
+2025-01-27 17:41:54,099 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_postgres, run_id=manual__2025-01-27T20:41:25.608518+00:00, map_index=-1, run_start_date=2025-01-27 20:41:45.088823+00:00, run_end_date=2025-01-27 20:41:53.492075+00:00, run_duration=8.403252, state=success, executor_state=success, try_number=1, max_tries=3, job_id=24, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 20:41:42.995053+00:00, queued_by_job_id=5, pid=19537
+2025-01-27 17:41:54,160 INFO - Marking run <DagRun northwin_meltano_pipeline @ 2025-01-27 20:41:25.608518+00:00: manual__2025-01-27T20:41:25.608518+00:00, state:running, queued_at: 2025-01-27 20:41:25.619597+00:00. externally triggered: True> successful
+2025-01-27 17:41:54,160 INFO - DagRun Finished: dag_id=northwin_meltano_pipeline, execution_date=2025-01-27 20:41:25.608518+00:00, run_id=manual__2025-01-27T20:41:25.608518+00:00, run_start_date=2025-01-27 20:41:26.738681+00:00, run_end_date=2025-01-27 20:41:54.160746+00:00, run_duration=27.422065, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=b2225949f66fd87f5b12f0045741e646
+2025-01-27 17:45:53,122 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 20:41:07,850 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 20:45:10,466 INFO - 2 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:45:10,467 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:45:10,468 INFO - DAG northwin_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 20:45:10,468 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+	<TaskInstance: northwin_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:45:10,471 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 20:45:10,471 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 20:45:10,473 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:45:10,474 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:45:10,474 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:45:10,475 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:45:10,489 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:45:17,444 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:45:26,319 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=1, map_index=-1)
+2025-01-27 20:45:26,320 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=1, map_index=-1)
+2025-01-27 20:45:26,325 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:45:09.276862+00:00, map_index=-1, run_start_date=2025-01-27 23:45:12.296933+00:00, run_end_date=2025-01-27 23:45:16.712336+00:00, run_duration=4.415403, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=25, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:45:10.469875+00:00, queued_by_job_id=5, pid=21989
+2025-01-27 20:45:26,325 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T23:45:09.276862+00:00, map_index=-1, run_start_date=2025-01-27 23:45:19.568366+00:00, run_end_date=2025-01-27 23:45:25.833560+00:00, run_duration=6.265194, state=success, executor_state=success, try_number=1, max_tries=3, job_id=26, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:45:10.469875+00:00, queued_by_job_id=5, pid=22010
+2025-01-27 20:46:07,887 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 20:48:16,818 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:48:16,819 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:48:16,819 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:48:16,822 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=2, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:48:16,822 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:48:16,834 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:48:24,354 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=2, map_index=-1)
+2025-01-27 20:48:24,360 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:45:09.276862+00:00, map_index=-1, run_start_date=2025-01-27 23:48:19.208495+00:00, run_end_date=2025-01-27 23:48:23.832617+00:00, run_duration=4.624122, state=up_for_retry, executor_state=success, try_number=2, max_tries=3, job_id=27, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:48:16.820848+00:00, queued_by_job_id=5, pid=22534
+2025-01-27 20:51:06,030 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 20:51:24,534 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:51:24,535 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:51:24,536 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:51:24,541 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=3, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:51:24,543 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:51:24,558 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:51:32,110 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=3, map_index=-1)
+2025-01-27 20:51:32,117 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:45:09.276862+00:00, map_index=-1, run_start_date=2025-01-27 23:51:26.725110+00:00, run_end_date=2025-01-27 23:51:31.372477+00:00, run_duration=4.647367, state=up_for_retry, executor_state=success, try_number=3, max_tries=3, job_id=28, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:51:24.538386+00:00, queued_by_job_id=5, pid=23077
+2025-01-27 20:54:32,518 INFO - 1 tasks up for execution:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:54:32,518 INFO - DAG northwin_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:54:32,518 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwin_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:45:09.276862+00:00 [scheduled]>
+2025-01-27 20:54:32,521 INFO - Sending TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=4, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:54:32,521 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:54:32,532 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwin_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:45:09.276862+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:54:40,575 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwin_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:45:09.276862+00:00', try_number=4, map_index=-1)
+2025-01-27 20:54:40,581 INFO - TaskInstance Finished: dag_id=northwin_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:45:09.276862+00:00, map_index=-1, run_start_date=2025-01-27 23:54:34.621626+00:00, run_end_date=2025-01-27 23:54:39.766471+00:00, run_duration=5.144845, state=failed, executor_state=success, try_number=4, max_tries=3, job_id=29, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:54:32.519626+00:00, queued_by_job_id=5, pid=23741
+2025-01-27 20:54:40,660 ERROR - Marking run <DagRun northwin_meltano_pipeline @ 2025-01-27 23:45:09.276862+00:00: manual__2025-01-27T23:45:09.276862+00:00, state:running, queued_at: 2025-01-27 23:45:09.294544+00:00. externally triggered: True> failed
+2025-01-27 20:54:40,661 INFO - DagRun Finished: dag_id=northwin_meltano_pipeline, execution_date=2025-01-27 23:45:09.276862+00:00, run_id=manual__2025-01-27T23:45:09.276862+00:00, run_start_date=2025-01-27 23:45:10.415068+00:00, run_end_date=2025-01-27 23:54:40.661174+00:00, run_duration=570.246106, state=failed, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=b2225949f66fd87f5b12f0045741e646
+2025-01-27 20:55:52,192 INFO - 2 tasks up for execution:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:55:50.481784+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:55:50.481784+00:00 [scheduled]>
+2025-01-27 20:55:52,192 INFO - DAG northwind_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:55:52,193 INFO - DAG northwind_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 20:55:52,193 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:55:50.481784+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:55:50.481784+00:00 [scheduled]>
+2025-01-27 20:55:52,195 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 20:55:52,195 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 20:55:52,196 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:55:50.481784+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:55:52,197 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:55:50.481784+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:55:52,198 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:55:50.481784+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:55:52,199 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:55:50.481784+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:55:50,568 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:55:50.481784+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:56:00,600 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:55:50.481784+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:56:08,672 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:55:50.481784+00:00', try_number=1, map_index=-1)
+2025-01-27 20:56:08,672 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:55:50.481784+00:00', try_number=1, map_index=-1)
+2025-01-27 20:56:08,677 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:55:50.481784+00:00, map_index=-1, run_start_date=2025-01-27 23:55:52.853895+00:00, run_end_date=2025-01-27 23:56:00.053478+00:00, run_duration=7.199583, state=up_for_retry, executor_state=success, try_number=1, max_tries=3, job_id=30, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:55:52.193890+00:00, queued_by_job_id=5, pid=24046
+2025-01-27 20:56:08,678 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T23:55:50.481784+00:00, map_index=-1, run_start_date=2025-01-27 23:56:02.178984+00:00, run_end_date=2025-01-27 23:56:08.145798+00:00, run_duration=5.966814, state=success, executor_state=success, try_number=1, max_tries=3, job_id=31, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:55:52.193890+00:00, queued_by_job_id=5, pid=24086
+2025-01-27 20:56:08,714 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 20:57:56,502 ERROR - Marking run <DagRun northwind_meltano_pipeline @ 2025-01-27 23:55:50.481784+00:00: manual__2025-01-27T23:55:50.481784+00:00, state:running, queued_at: 2025-01-27 23:55:50.492466+00:00. externally triggered: True> failed
+2025-01-27 20:57:56,503 INFO - DagRun Finished: dag_id=northwind_meltano_pipeline, execution_date=2025-01-27 23:55:50.481784+00:00, run_id=manual__2025-01-27T23:55:50.481784+00:00, run_start_date=2025-01-27 23:55:52.124860+00:00, run_end_date=2025-01-27 23:57:56.503327+00:00, run_duration=124.378467, state=failed, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=a3411272e58739a0b4b59ed0e905d32a
+2025-01-27 20:58:20,543 INFO - 2 tasks up for execution:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+2025-01-27 20:58:20,544 INFO - DAG northwind_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:58:20,544 INFO - DAG northwind_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 20:58:20,545 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+2025-01-27 20:58:20,547 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 20:58:20,547 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 20:58:20,548 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:58:20,549 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:20,549 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 20:58:20,550 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:20,566 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:28,811 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:37,991 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1)
+2025-01-27 20:58:37,991 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1)
+2025-01-27 20:58:37,998 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=manual__2025-01-27T23:58:19.444880+00:00, map_index=-1, run_start_date=2025-01-27 23:58:22.944171+00:00, run_end_date=2025-01-27 23:58:28.138819+00:00, run_duration=5.194648, state=success, executor_state=success, try_number=1, max_tries=3, job_id=32, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:58:20.545707+00:00, queued_by_job_id=5, pid=24494
+2025-01-27 20:58:37,998 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=manual__2025-01-27T23:58:19.444880+00:00, map_index=-1, run_start_date=2025-01-27 23:58:30.835880+00:00, run_end_date=2025-01-27 23:58:37.268491+00:00, run_duration=6.432611, state=success, executor_state=success, try_number=1, max_tries=3, job_id=33, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-27 23:58:20.545707+00:00, queued_by_job_id=5, pid=24528
+2025-01-27 20:58:40,932 INFO - 1 tasks up for execution:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+2025-01-27 20:58:40,932 INFO - DAG northwind_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 20:58:40,933 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_postgres manual__2025-01-27T23:58:19.444880+00:00 [scheduled]>
+2025-01-27 20:58:40,935 WARNING - cannot record scheduled_duration for task extract_from_csv_load_postgres because previous state change time has not been saved
+2025-01-27 20:58:40,936 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 20:58:40,936 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:40,956 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_postgres', 'manual__2025-01-27T23:58:19.444880+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 20:58:51,883 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='manual__2025-01-27T23:58:19.444880+00:00', try_number=1, map_index=-1)
+2025-01-27 20:58:51,889 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_csv_load_postgres, run_id=manual__2025-01-27T23:58:19.444880+00:00, map_index=-1, run_start_date=2025-01-27 23:58:43.080672+00:00, run_end_date=2025-01-27 23:58:51.304326+00:00, run_duration=8.223654, state=success, executor_state=success, try_number=1, max_tries=3, job_id=34, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-27 23:58:40.934035+00:00, queued_by_job_id=5, pid=24583
+2025-01-27 20:58:52,175 INFO - Marking run <DagRun northwind_meltano_pipeline @ 2025-01-27 23:58:19.444880+00:00: manual__2025-01-27T23:58:19.444880+00:00, state:running, queued_at: 2025-01-27 23:58:19.480946+00:00. externally triggered: True> successful
+2025-01-27 20:58:52,176 INFO - DagRun Finished: dag_id=northwind_meltano_pipeline, execution_date=2025-01-27 23:58:19.444880+00:00, run_id=manual__2025-01-27T23:58:19.444880+00:00, run_start_date=2025-01-27 23:58:20.492593+00:00, run_end_date=2025-01-27 23:58:52.176278+00:00, run_duration=31.683685, state=success, external_trigger=True, run_type=manual, data_interval_start=2025-01-26 00:00:00+00:00, data_interval_end=2025-01-27 00:00:00+00:00, dag_hash=a3411272e58739a0b4b59ed0e905d32a
+2025-01-27 21:00:01,487 INFO - Setting next_dagrun for northwind_meltano_pipeline to 2025-01-28 00:00:00+00:00, run_after=2025-01-29 00:00:00+00:00
+2025-01-27 21:00:01,597 INFO - 2 tasks up for execution:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+2025-01-27 21:00:01,597 INFO - DAG northwind_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 21:00:01,597 INFO - DAG northwind_meltano_pipeline has 1/16 running and queued tasks
+2025-01-27 21:00:01,598 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_csv scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+	<TaskInstance: northwind_meltano_pipeline.extract_from_postgres_load_csv scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+2025-01-27 21:00:01,600 WARNING - cannot record scheduled_duration for task extract_from_csv_load_csv because previous state change time has not been saved
+2025-01-27 21:00:01,600 WARNING - cannot record scheduled_duration for task extract_from_postgres_load_csv because previous state change time has not been saved
+2025-01-27 21:00:01,601 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 21:00:01,601 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:01,602 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 2 and queue default
+2025-01-27 21:00:01,602 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:01,614 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_csv', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:09,451 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_postgres_load_csv', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:17,398 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_csv', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1)
+2025-01-27 21:00:17,399 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_postgres_load_csv', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1)
+2025-01-27 21:00:17,404 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_csv_load_csv, run_id=scheduled__2025-01-27T00:00:00+00:00, map_index=-1, run_start_date=2025-01-28 00:00:03.907934+00:00, run_end_date=2025-01-28 00:00:08.954433+00:00, run_duration=5.046499, state=success, executor_state=success, try_number=1, max_tries=3, job_id=35, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-28 00:00:01.598663+00:00, queued_by_job_id=5, pid=24865
+2025-01-27 21:00:17,405 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_postgres_load_csv, run_id=scheduled__2025-01-27T00:00:00+00:00, map_index=-1, run_start_date=2025-01-28 00:00:11.061268+00:00, run_end_date=2025-01-28 00:00:16.874436+00:00, run_duration=5.813168, state=success, executor_state=success, try_number=1, max_tries=3, job_id=36, pool=default_pool, queue=default, priority_weight=2, operator=BashOperator, queued_dttm=2025-01-28 00:00:01.598663+00:00, queued_by_job_id=5, pid=24906
+2025-01-27 21:00:20,149 INFO - 1 tasks up for execution:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_postgres scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+2025-01-27 21:00:20,150 INFO - DAG northwind_meltano_pipeline has 0/16 running and queued tasks
+2025-01-27 21:00:20,151 INFO - Setting the following tasks to queued state:
+	<TaskInstance: northwind_meltano_pipeline.extract_from_csv_load_postgres scheduled__2025-01-27T00:00:00+00:00 [scheduled]>
+2025-01-27 21:00:20,155 WARNING - cannot record scheduled_duration for task extract_from_csv_load_postgres because previous state change time has not been saved
+2025-01-27 21:00:20,157 INFO - Sending TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2025-01-27 21:00:20,158 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_postgres', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:20,189 INFO - Executing command: ['airflow', 'tasks', 'run', 'northwind_meltano_pipeline', 'extract_from_csv_load_postgres', 'scheduled__2025-01-27T00:00:00+00:00', '--local', '--subdir', 'DAGS_FOLDER/pipeline_meltano.py']
+2025-01-27 21:00:31,190 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='northwind_meltano_pipeline', task_id='extract_from_csv_load_postgres', run_id='scheduled__2025-01-27T00:00:00+00:00', try_number=1, map_index=-1)
+2025-01-27 21:00:31,195 INFO - TaskInstance Finished: dag_id=northwind_meltano_pipeline, task_id=extract_from_csv_load_postgres, run_id=scheduled__2025-01-27T00:00:00+00:00, map_index=-1, run_start_date=2025-01-28 00:00:22.291469+00:00, run_end_date=2025-01-28 00:00:30.384265+00:00, run_duration=8.092796, state=success, executor_state=success, try_number=1, max_tries=3, job_id=37, pool=default_pool, queue=default, priority_weight=1, operator=BashOperator, queued_dttm=2025-01-28 00:00:20.152190+00:00, queued_by_job_id=5, pid=24962
+2025-01-27 21:00:31,499 INFO - Marking run <DagRun northwind_meltano_pipeline @ 2025-01-27 00:00:00+00:00: scheduled__2025-01-27T00:00:00+00:00, state:running, queued_at: 2025-01-28 00:00:01.480789+00:00. externally triggered: False> successful
+2025-01-27 21:00:31,500 INFO - DagRun Finished: dag_id=northwind_meltano_pipeline, execution_date=2025-01-27 00:00:00+00:00, run_id=scheduled__2025-01-27T00:00:00+00:00, run_start_date=2025-01-28 00:00:01.535251+00:00, run_end_date=2025-01-28 00:00:31.500090+00:00, run_duration=29.964839, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2025-01-27 00:00:00+00:00, data_interval_end=2025-01-28 00:00:00+00:00, dag_hash=a3411272e58739a0b4b59ed0e905d32a
+2025-01-27 21:00:31,505 INFO - Setting next_dagrun for northwind_meltano_pipeline to 2025-01-28 00:00:00+00:00, run_after=2025-01-29 00:00:00+00:00
+2025-01-27 21:01:08,762 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 21:06:06,845 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 21:11:06,889 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 21:16:04,956 INFO - Adopting or resetting orphaned tasks for active dag runs

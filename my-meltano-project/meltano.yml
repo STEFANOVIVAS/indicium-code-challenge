@@ -1,0 +1,138 @@
+version: 1
+default_environment: dev
+project_id: 71a0bfcd-9c37-4270-9e59-9b8e3c06c69a
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      database: northwind
+      default_replication_method: FULL_TABLE
+      host: localhost
+      password: thewindisblowing
+      port: 5432
+      user: northwind_user
+      stream_maps:
+        public-categories:
+          __alias__: categories
+        public-customer_customer_demo:
+          __alias__: customer_customer_demo
+        public-customer_demographics:
+          __alias__: customer_demographics
+        public-customers:
+          __alias__: customers
+        public-employee_territories:
+          __alias__: employee_territories
+        public-employees:
+          __alias__: employees
+        public-orders:
+          __alias__: orders
+        public-products:
+          __alias__: products
+        public-region:
+          __alias__: region
+        public-shippers:
+          __alias__: shippers
+        public-suppliers:
+          __alias__: suppliers
+        public-territories:
+          __alias__: territories
+        public-us_states:
+          __alias__: us_states
+    select:
+    - public-*.*
+
+  - name: tap-csv--from-csv
+    inherit_from: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files: [{entity: orders_details, path: $MELTANO_PROJECT_ROOT/extract/order_details.csv, keys: [order_id,
+            product_id], delimiter: ','}]
+
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files: [{entity: categories, path: $MELTANO_PROJECT_ROOT/output/postgres/categories/$DATE/categories.csv,
+          keys: [category_id], delimiter: ','}, {entity: customers, path: $MELTANO_PROJECT_ROOT/output/postgres/customers/$DATE/customers.csv,
+          keys: [customer_id], delimiter: ','}, {entity: employee_territories, path: $MELTANO_PROJECT_ROOT/output/postgres/employee_territories/$DATE/employee_territories.csv,
+          keys: [employee_id, territory_id], delimiter: ','}, {entity: employees,
+          path: $MELTANO_PROJECT_ROOT/output/postgres/employees/$DATE/employees.csv, keys: [employee_id],
+          delimiter: ','}, {entity: orders, path: $MELTANO_PROJECT_ROOT/output/postgres/orders/$DATE/orders.csv,
+          keys: [order_id, customer_id, employee_id], delimiter: ','}, {entity: products,
+          path: $MELTANO_PROJECT_ROOT/output/postgres/products/$DATE/products.csv, keys: [product_id, supplier_id,
+            category_id], delimiter: ','}, {entity: region, path: $MELTANO_PROJECT_ROOT/output/postgres/region/$DATE/region.csv,
+          keys: [region_id], delimiter: ','}, {entity: shippers, path: $MELTANO_PROJECT_ROOT/output/postgres/shippers/$DATE/shippers.csv,
+          keys: [shipper_id], delimiter: ','}, {entity: suppliers, path: $MELTANO_PROJECT_ROOT/output/postgres/suppliers/$DATE/suppliers.csv,
+          keys: [supplier_id], delimiter: ','}, {entity: territories, path: $MELTANO_PROJECT_ROOT/output/postgres/territories/$DATE/territories.csv,
+          keys: [territory_id, region_id], delimiter: ','}, {entity: us_states, path: $MELTANO_PROJECT_ROOT/output/postgres/us_states/$DATE/us_states.csv,
+          keys: [state_id], delimiter: ','}, {entity: orders_details, path: $MELTANO_PROJECT_ROOT/output/csv/orders_details/$DATE/orders_details.csv,
+          keys: [order_id, product_id], delimiter: ','}]
+  loaders:
+  - name: target-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-target-postgres
+    config:
+      database: ecommerce
+      host: localhost
+      password: stefanovivas
+      port: 5433
+      user: stefano
+      default_target_schema: ecommerce
+
+  - name: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+  - name: target-csv--from-postgres
+    inherit_from: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+    config:
+      file_naming_scheme: $MELTANO_PROJECT_ROOT/output/postgres/{stream_name}/$DATE/{stream_name}.csv
+      overwrite_behavior: replace_file
+
+  - name: target-csv--order-details
+    inherit_from: target-csv
+    config:
+      file_naming_scheme: $MELTANO_PROJECT_ROOT/output/csv/{stream_name}/$DATE/{stream_name}.csv
+      overwrite_behavior: replace_file
+
+
+  utilities:
+  - name: airflow
+    variant: apache
+    pip_url: git+https://github.com/meltano/airflow-ext.git@main apache-airflow==2.8.1
+      --constraint https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-no-providers-${MELTANO__PYTHON_VERSION}.txt
+jobs:
+- name: postgres-to-local
+  tasks:
+  - tap-postgres target-csv--from-postgres
+
+- name: orders-details-csv-to-local
+  tasks:
+  - tap-csv--from-csv target-csv--order-details
+
+- name: local-csv-to-postgres
+  tasks:
+  - tap-csv target-postgres
+
+- name: pipeline-csv-and-postgres-to-local-target-postgres
+  tasks:
+  - tap-postgres target-csv--from-postgres tap-csv--from-csv target-csv--order-details
+  - tap-csv target-postgres
+schedules:
+- name: daily-indicium-load
+  interval: '@hourly'
+  job: pipeline-csv-and-postgres-to-local-target-postgres
+- name: schedule_test
+  interval: '@hourly'
+  extractor: tap-postgres
+  loader: target-csv--from-postgres
+  transform: skip
+  start_date: 2025-01-27 19:43:35.944347

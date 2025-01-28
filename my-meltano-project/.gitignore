@@ -1,0 +1,7 @@
+/venv
+/.meltano
+.env
+/dbdata
+/dbdata_ecommerce
+../dbdata
+../dbdata_ecommerce

@@ -1,0 +1,312 @@
+[2025-01-27 16:36:01 -0300] [5030] [INFO] Starting gunicorn 21.2.0
+[2025-01-27 16:36:01 -0300] [5030] [INFO] Listening at: http://[::]:8793 (5030)
+[2025-01-27 16:36:01 -0300] [5030] [INFO] Using worker: sync
+[2025-01-27 16:36:02 -0300] [5031] [INFO] Booting worker with pid: 5031
+[2025-01-27 16:36:02 -0300] [5033] [INFO] Booting worker with pid: 5033
+[2m2025-01-27T19:36:03.089974Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:36:36.226670Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:37:09.024880Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:37:42.809973Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:38:16.055517Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:38:49.723564Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:39:23.681438Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:39:57.236010Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:40:30.236920Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:41:03.184667Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:41:36.585031Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:42:09.955294Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:42:43.100471Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:43:15.973683Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:43:49.253395Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:44:20.340529Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:44:30.750219Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:45:03.870845Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:45:37.152190Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:46:10.484059Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:46:43.435647Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:47:16.133361Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:47:38.629885Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:47:53.115502Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:47:57.926450Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:48:25.412225Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:48:58.380616Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:49:31.193823Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:50:03.510192Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:50:36.036346Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:51:08.723442Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:51:41.818153Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:52:14.885464Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:52:47.825121Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:53:21.378328Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:53:54.904048Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:54:27.973454Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:55:00.752854Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:55:33.425058Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:56:06.404179Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:56:39.292220Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:57:12.654400Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:57:45.900741Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:58:19.178673Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:58:52.087105Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:59:25.037257Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T19:59:58.084380Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:00:31.145118Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:01:03.943878Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:01:36.421403Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:02:08.945273Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:02:42.979822Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:03:15.955432Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:03:49.491668Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:04:22.255942Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:04:55.653350Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:05:29.092705Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:06:02.163620Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:06:34.847614Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:07:08.095361Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:07:40.967829Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:08:13.470840Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:08:46.629298Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:09:26.664578Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:10:00.204191Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:10:33.439266Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:11:06.776265Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:11:39.679134Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:12:12.365047Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:12:45.047492Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:13:18.396193Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:13:51.633759Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:14:24.925522Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:14:57.865154Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:15:35.776235Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:16:09.138465Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:16:42.175460Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:17:15.134073Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:17:48.362089Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:18:34.103902Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:19:07.738110Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:19:40.523425Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:20:13.334323Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:20:46.380642Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:21:19.640573Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:21:52.989983Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:22:25.777376Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:22:59.195002Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:23:32.428206Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:24:05.536501Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:24:38.350709Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:25:11.290414Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:25:44.333333Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:26:16.667745Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:26:49.561426Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:27:22.640009Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:27:56.122972Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:28:29.252090Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:29:03.251959Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:29:38.082647Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:30:11.170047Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:30:43.679685Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:31:16.380061Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:31:49.216929Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:32:22.364126Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:32:54.963306Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:33:27.697553Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:34:00.603031Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:34:33.515336Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:35:06.468165Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:35:39.660781Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:36:12.457240Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:36:45.507797Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:37:18.762408Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:37:52.019680Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:38:24.836437Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:38:58.067533Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:39:44.376338Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:40:16.988572Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:40:50.080105Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:41:23.049924Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:41:56.394277Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:42:29.180189Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:43:01.982771Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:43:33.532516Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:44:06.502757Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:44:39.068082Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:45:11.754321Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:45:44.880004Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:46:17.924781Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:46:50.719311Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:47:23.784389Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T20:47:56.377623Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2025-01-27 19:50:13 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:5031)
+[2025-01-27 19:50:13 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:5033)
+[2025-01-27 19:50:13 -0300] [5033] [INFO] Worker exiting (pid: 5033)
+[2025-01-27 19:50:13 -0300] [5031] [INFO] Worker exiting (pid: 5031)
+[2025-01-27 19:50:13 -0300] [5030] [ERROR] Worker (pid:5031) exited with code 1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 527, in reap_workers
+    self.log.error('Worker (pid:%s) exited with code %s', wpid, exitcode)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/__main__.py", line 57, in main
+    args.func(args)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 67, in scheduler
+    run_command_with_daemon_option(
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/daemon_utils.py", line 81, in run_command_with_daemon_option
+    callback()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 70, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 48, in _run_scheduler_job
+    stack.enter_context(_serve_logs(args.skip_serve_logs))
+  File "/usr/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 85, in _serve_logs
+    sub_proc.start()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 527, in reap_workers
+    self.log.error('Worker (pid:%s) exited with code %s', wpid, exitcode)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s'
+Arguments: (5031, 1)
+[2025-01-27 19:50:13 -0300] [5030] [ERROR] Worker (pid:5031) exited with code 1.
+[2025-01-27 19:50:13 -0300] [20617] [INFO] Booting worker with pid: 20617
+[2025-01-27 19:50:13 -0300] [20618] [INFO] Booting worker with pid: 20618
+[2m2025-01-27T22:50:16.421472Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2025-01-27 20:38:49 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:20617)
+[2025-01-27 20:38:49 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:20618)
+[2025-01-27 20:38:49 -0300] [20617] [INFO] Worker exiting (pid: 20617)
+[2025-01-27 20:38:49 -0300] [20618] [INFO] Worker exiting (pid: 20618)
+[2025-01-27 20:38:49 -0300] [5030] [ERROR] Worker (pid:20617) exited with code 1
+[2025-01-27 20:38:49 -0300] [5030] [ERROR] Worker (pid:20617) exited with code 1.
+[2025-01-27 20:38:49 -0300] [5030] [ERROR] Worker (pid:20618) exited with code 1
+[2025-01-27 20:38:49 -0300] [5030] [ERROR] Worker (pid:20618) exited with code 1.
+[2025-01-27 20:38:49 -0300] [20648] [INFO] Booting worker with pid: 20648
+[2025-01-27 20:38:49 -0300] [20649] [INFO] Booting worker with pid: 20649
+[2m2025-01-27T23:39:26.489207Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:39:59.563907Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:40:33.139530Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:41:06.500209Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:41:39.246061Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:42:12.016083Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:42:45.048091Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:43:18.045247Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:43:52.305543Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:44:25.066752Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:44:58.597653Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:45:31.953845Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:46:04.942305Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:46:39.769669Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:47:12.452293Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:47:45.403714Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:48:25.392853Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:48:58.538304Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:49:31.050450Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:50:04.636080Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:50:37.512512Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:51:10.416691Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:51:43.458132Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:52:16.475311Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:52:49.756473Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:53:22.759681Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:53:56.232151Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:54:29.475351Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:55:02.472012Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:55:35.442594Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:56:10.918209Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:56:44.746147Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:57:18.466308Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:57:52.042803Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:58:39.185669Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:59:12.203313Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-27T23:59:44.717116Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:00:18.317354Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:00:51.934859Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:01:25.381745Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:01:58.140827Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:02:31.325318Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:03:04.049298Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:03:37.035720Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:04:10.277675Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:04:43.260469Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:05:16.279063Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:05:49.509273Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:06:22.098646Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:06:55.001600Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:07:27.616392Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:08:02.393522Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:08:35.392399Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:09:08.151695Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:09:40.771421Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:10:13.701505Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:10:46.805906Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:11:19.523138Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:11:51.954739Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:12:24.905567Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:12:57.617700Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:13:30.508247Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:14:03.517875Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:14:36.309746Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:15:09.777501Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:15:42.459101Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:16:15.435839Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:16:48.379255Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
