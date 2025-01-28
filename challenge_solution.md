@@ -22,4 +22,9 @@ The challenge specifications can be found at [this link.](https://github.com/STE
     
           docker compose up -d
 
-## Adding Extractors to Pull Data from Sources
+## Running jobs:
+To extract and load data using Meltano you need to install specific packages according to the source and destination of the data,
+such as postgres, csv, parquet, etc. 
+However, since the packages are already inside the Meltano configuration file (meltano.yml), just run a task or job, then the application itself will install the packages for you.  So you could run the extract and load pipeline, passing a date as an argument, to install all the packages needed for this project.
+
+    DATE=2025-02-02 meltano run pipeline-csv-and-postgres-to-local-target-postgres
