@@ -75,6 +75,18 @@ The second DAG (northwind_meltano_pipeline) was created manually after installin
 ![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/meltano-airflow-task.png)
 
 ## Accessing data loaded in the Postgres database
+According to our docker-compose image, pg admin can be accessed through port 16543, therefore, if we enter the address http://localhost:16543/ we will have access to the main page of the database manager. Enter the username and password listed in the docker image (pg-admin).
+In the main page you will need to add a new server. 
+Choose a name to put on the server through the General tab.  
+In the tab "Connection" fill in the fields HOST,PORT, DATABASE, USERNAME,PASSWORD as it is in the docker image (warehouse_db) and save it. 
+
+<br>
+
+![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/meltano-pgadmin-server.png)  
+
+Go to the ecommerce database, ecommerce schema and search for the tables.  
+<br>
+![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/meltano-pgadmin-query.png)  
 
 
 
