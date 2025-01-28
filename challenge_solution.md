@@ -22,9 +22,34 @@ The challenge specifications can be found at [this link.](https://github.com/STE
     
           docker compose up -d
 
-## Running jobs:
-To extract and load data using Meltano you need to install specific packages according to the source and destination of the data,
-such as postgres, csv, parquet, etc. 
-However, since the packages are already inside the Meltano configuration file (meltano.yml), just run a task or job, then the application itself will install the packages for you.  So you could run the extract and load pipeline, passing a date as an argument, to install all the packages needed for this project.
+## Adding plugins to extrac and load data:
 
-    DATE=2025-02-02 meltano run pipeline-csv-and-postgres-to-local-target-postgres
+     meltano add extractor tap-csv tap-postgres  
+     meltano add loader target-csv target-postgres  
+
+## Running jobs:
+You could run the entire pipeline (Extract and load) with this code...
+
+    meltano run pipeline-csv-and-postgres-to-local-target-postgres
+
+...or you could run each of the two steps separately...
+
+    meltano run postgres-to-local 
+    meltano run orders-details-csv-to-local  
+    meltano run local-csv-to-postgres
+
+## Passing parameters to jobs:
+You could pass a DATE parameter to the job running so it will write the data locally with this parameter inside the file path such as:
+
+    /output/postgres/{table}/DATE/file.format
+    /output/postgres/{table}/DATE/file.format
+    /output/csv/DATE/file.format
+
+So, in addition to separating the data by date, we can backfill the data to a past date.  
+
+    DATE=2025-01-01 meltano run pipeline-csv-and-postgres-to-local-target-postgres
+    
+
+
+
+
