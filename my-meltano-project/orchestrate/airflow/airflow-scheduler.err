@@ -310,3 +310,137 @@ Arguments: (5031, 1)
 [2m2025-01-28T00:15:42.459101Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
 [2m2025-01-28T00:16:15.435839Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
 [2m2025-01-28T00:16:48.379255Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:17:20.880244Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:17:53.683192Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:18:26.722140Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:18:59.671919Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:19:32.337879Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:20:05.364938Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:20:38.349683Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:21:11.437933Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:21:44.117879Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:22:16.600833Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:22:49.430275Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:23:21.688256Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:23:54.334661Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:24:27.236453Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:25:00.202876Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:25:33.711386Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2m2025-01-28T00:26:06.582614Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2025-01-27 21:35:09 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:20648)
+[2025-01-27 21:35:09 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:20649)
+[2025-01-27 21:35:09 -0300] [20648] [INFO] Worker exiting (pid: 20648)
+[2025-01-27 21:35:09 -0300] [20649] [INFO] Worker exiting (pid: 20649)
+[2025-01-27 21:35:09 -0300] [5030] [ERROR] Worker (pid:20648) exited with code 1
+[2025-01-27 21:35:09 -0300] [5030] [ERROR] Worker (pid:20648) exited with code 1.
+[2025-01-27 21:35:09 -0300] [5030] [ERROR] Worker (pid:20649) exited with code 1
+[2025-01-27 21:35:09 -0300] [5030] [ERROR] Worker (pid:20649) exited with code 1.
+[2025-01-27 21:35:09 -0300] [30660] [INFO] Booting worker with pid: 30660
+[2025-01-27 21:35:09 -0300] [30661] [INFO] Booting worker with pid: 30661
+[2025-01-27 21:44:26 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:30660)
+[2025-01-27 21:44:26 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:30661)
+[2025-01-27 21:44:26 -0300] [30661] [INFO] Worker exiting (pid: 30661)
+[2025-01-27 21:44:26 -0300] [30660] [INFO] Worker exiting (pid: 30660)
+[2025-01-27 21:44:26 -0300] [5030] [ERROR] Worker (pid:30660) exited with code 1
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/logging/__init__.py", line 1103, in emit
+    stream.write(msg + self.terminator)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 527, in reap_workers
+    self.log.error('Worker (pid:%s) exited with code %s', wpid, exitcode)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1506, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1624, in _log
+    self.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1634, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1696, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 968, in handle
+    self.emit(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1108, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.10/logging/__init__.py", line 1021, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/bin/airflow", line 8, in <module>
+    sys.exit(main())
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/__main__.py", line 57, in main
+    args.func(args)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 67, in scheduler
+    run_command_with_daemon_option(
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/daemon_utils.py", line 81, in run_command_with_daemon_option
+    callback()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 70, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 48, in _run_scheduler_job
+    stack.enter_context(_serve_logs(args.skip_serve_logs))
+  File "/usr/lib/python3.10/contextlib.py", line 492, in enter_context
+    result = _cm_type.__enter__(cm)
+  File "/usr/lib/python3.10/contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/cli/commands/scheduler_command.py", line 85, in _serve_logs
+    sub_proc.start()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/usr/lib/python3.10/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/airflow/utils/serve_logs.py", line 179, in serve_logs
+    StandaloneGunicornApplication(wsgi_app, options).run()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 209, in run
+    self.sleep()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 360, in sleep
+    ready = select.select([self.PIPE[0]], [], [], 1.0)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 527, in reap_workers
+    self.log.error('Worker (pid:%s) exited with code %s', wpid, exitcode)
+  File "/home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-meltano-project/.meltano/utilities/airflow/venv/lib/python3.10/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:%s) exited with code %s'
+Arguments: (30660, 1)
+[2025-01-27 21:44:26 -0300] [5030] [ERROR] Worker (pid:30660) exited with code 1.
+[2025-01-27 21:44:26 -0300] [30678] [INFO] Booting worker with pid: 30678
+[2025-01-27 21:44:26 -0300] [30679] [INFO] Booting worker with pid: 30679
+[2m2025-01-28T01:06:50.201360Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m
+[2025-01-27 22:06:50 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:30678)
+[2025-01-27 22:06:50 -0300] [5030] [CRITICAL] WORKER TIMEOUT (pid:30679)
+[2025-01-27 22:06:50 -0300] [30678] [INFO] Worker exiting (pid: 30678)
+[2025-01-27 22:06:50 -0300] [30679] [INFO] Worker exiting (pid: 30679)
+[2025-01-27 22:06:50 -0300] [5030] [ERROR] Worker (pid:30678) exited with code 1
+[2025-01-27 22:06:50 -0300] [5030] [ERROR] Worker (pid:30678) exited with code 1.
+[2025-01-27 22:06:50 -0300] [5030] [ERROR] Worker (pid:30679) exited with code 1
+[2025-01-27 22:06:50 -0300] [5030] [ERROR] Worker (pid:30679) exited with code 1.
+[2025-01-27 22:06:50 -0300] [30714] [INFO] Booting worker with pid: 30714
+[2025-01-27 22:06:50 -0300] [30715] [INFO] Booting worker with pid: 30715
+[2m2025-01-28T01:07:25.113938Z[0m [[32m[1minfo     [0m] [1mEnvironment 'dev' is active   [0m

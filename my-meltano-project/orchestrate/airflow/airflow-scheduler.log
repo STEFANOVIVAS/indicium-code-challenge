@@ -621,3 +621,5 @@ sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open datab
 2025-01-27 21:06:06,845 INFO - Adopting or resetting orphaned tasks for active dag runs
 2025-01-27 21:11:06,889 INFO - Adopting or resetting orphaned tasks for active dag runs
 2025-01-27 21:16:04,956 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 21:21:05,077 INFO - Adopting or resetting orphaned tasks for active dag runs
+2025-01-27 21:26:05,130 INFO - Adopting or resetting orphaned tasks for active dag runs

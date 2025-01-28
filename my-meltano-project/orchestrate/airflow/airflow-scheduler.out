@@ -500,3 +500,5 @@ Changing /home/stefanovivas/challenge-indicum-2/indicium-code-challenge/my-melta
 [[34m2025-01-27T21:06:06.845-0300[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
 [[34m2025-01-27T21:11:06.889-0300[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
 [[34m2025-01-27T21:16:04.956-0300[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2025-01-27T21:21:05.077-0300[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2025-01-27T21:26:05.130-0300[0m] {[34mscheduler_job_runner.py:[0m1619} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
