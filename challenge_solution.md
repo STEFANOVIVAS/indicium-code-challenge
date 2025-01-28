@@ -22,7 +22,7 @@ The challenge specifications can be found at [this link.](https://github.com/STE
     
           docker compose up -d
 
-## Adding plugins to extrac and load data:
+## Adding plugins to extract and load data:
 
      meltano add extractor tap-csv tap-postgres  
      meltano add loader target-csv target-postgres  
@@ -49,7 +49,21 @@ So, in addition to separating the data by date, we can backfill the data to a pa
 
     DATE=2025-01-01 meltano run pipeline-csv-and-postgres-to-local-target-postgres
     
+## Orchestrate Data
+Most data pipelines aren't run just once, but over and over again, to make sure additions and changes in the source eventually make their way to the destination.
+To help you realize this, Meltano supports scheduled pipelines that can be orchestrated using Apache Airflow.
 
+    meltano add utility airflow
+    meltano invoke airflow:initialize
+    meltano invoke airflow users create -u admin@localhost -p password --role Admin -e admin@localhost -f admin -l admin
 
+Starting the Airflow scheduler
 
+    meltano invoke airflow scheduler -D
+
+Using Airflow directly
+
+    meltano invoke airflow webserver -D
+
+The web interface and DAG overview will be available at http://localhost:8080.
 
