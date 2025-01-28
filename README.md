@@ -1,5 +1,5 @@
 # Proposed solution for Data Engineer Indicium Tech Code Challenge.  
-The challenge specifications can be found at [this link.](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/README.md)
+The challenge specifications can be found at [this link.](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/Indicium-challenge.md)
 ## Prepare environment
 
   -  Create and navigate to a directory to hold your Meltano projects:
@@ -66,4 +66,15 @@ Using Airflow directly
     meltano invoke airflow webserver -D
 
 The web interface and DAG overview will be available at http://localhost:8080.
+When accessing the web server in your browser, you must enter the username and password created in the first step of the orchestrate data section and see something like this:
+
+![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/Meltano-Airflow-webserver.png)
+The first DAG is created automatically by airflow when we create a schedule in meltano.
+The second DAG (northwind_meltano_pipeline) was created manually after installing airflow. This task uses the BashOperator to trigger daily jobs created on the Meltano platform, passing the actual date captured from the system as a parameter. (DATE=$(date +%Y-%m-%d).The DAGS were in the './orchestrate/airflow/dags' folder.
+
+![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/meltano-airflow-task.png)
+
+## Accessing data loaded in the Postgres database
+
+
 
