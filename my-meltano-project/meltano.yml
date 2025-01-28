@@ -130,9 +130,4 @@ schedules:
 - name: daily-indicium-load
   interval: '@hourly'
   job: pipeline-csv-and-postgres-to-local-target-postgres
-- name: schedule_test
-  interval: '@hourly'
-  extractor: tap-postgres
-  loader: target-csv--from-postgres
-  transform: skip
-  start_date: 2025-01-27 19:43:35.944347
+
