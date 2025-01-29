@@ -1,5 +1,9 @@
 # Proposed solution for Data Engineer Indicium Tech Code Challenge.  
-The challenge specifications can be found at [this link.](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/Indicium-challenge.md)
+
+<p align="justify">In short, the challenge was to build a pipeline that extracts the data everyday from both sources and write the data first to local disk, and second to a PostgreSQL database. There were a number of requirements that needed to be followed, and you can see them in this link.(https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/Indicium-challenge.md). You need to use some pre-defined tools like, postgres database for storage and apache airflow to schedule the pipeline, but were free to choose between Meltano or Embulk as a data loader. I chose Meltano because I feel more comfortable working with the Python language, despite knowing a little bit of Java.</p>
+<p align="justify">The meltano oficial documentation provide us with some possibilities to install the tool, like pip, pipx and docker (https://meltano.com/). I ended up choosing pipx option to install meltano as a easy way to do it for a proof of concept or something. For production grade application I recommend deploy meltano with a docker container image, simplifying the process and prevent issues caused by inconsistencies between environments. In doing so, we would need to make some small changes, such as extending the Docker file to add the Meltano and Airflow services, and making some small modifications to the commands to run the application.</p>
+
+
 ## Prepare environment
 
   -  Create and navigate to a directory to hold your Meltano projects:
