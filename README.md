@@ -68,10 +68,18 @@ Things to point out:
 
   -  In a real backfilling pipeline, we need to pass the date inside the source to filter data only for that period.
   -  The option for default replication method may vary depending on requirements for pipelines, like full or incremental load.
-## Creating jobs
+## Meltano jobs
+The meltano tool allows you to create a functionality called Job, which allows you to run a set of chained tasks with just one command. Considering the need to make the pipeline modular, so that we can reprocess just one of the steps, 4 jobs were built for the pipeline.
 
-## Running jobs:
-You could run the entire pipeline (Extract and load) with this code...
+  - postgres-to-local, which represents the task that extract data from postgres (tap-postgres) and write a CSV file(target-csv--from-postgres).
+
+  - orders-details-csv-to-local, which represents the task that extract data from CSV (tap-csv--from-csv) and write a CSV file(target-csv--order-details)
+
+  - local-csv-to-postgres, which represents the task that extract data from all the CSV files (tap-csv) and load them into a postgres database(target-postgres)
+
+  - pipeline-csv-and-postgres-to-local-target-postgres that executes all the pipeline at once, one step at once [tap-postgres target-csv--from-postgres tap-csv--from-csv target-csv--order-details, tap-csv target-postgres]
+
+This way, you could run the entire pipeline (Extract and load) with this code...
 
     meltano run pipeline-csv-and-postgres-to-local-target-postgres
 
@@ -88,10 +96,10 @@ You could pass a DATE parameter to the job running so it will write the data loc
     /output/postgres/{table}/DATE/file.format
     /output/csv/DATE/file.format
 
-So, in addition to separating the data by date, we can backfill the data to a past date.  
+So, in addition to separating the data by date, we can backfill the data to a past date... 
 
     DATE=2025-01-01 meltano run pipeline-csv-and-postgres-to-local-target-postgres
-    
+
 ## Orchestrate Data
 Most data pipelines aren't run just once, but over and over again, to make sure additions and changes in the source eventually make their way to the destination.
 To help you realize this, Meltano supports scheduled pipelines that can be orchestrated using Apache Airflow.
