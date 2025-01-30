@@ -29,10 +29,10 @@
 ## Adding plugins to extract and load data:
 <p align="justify">For load and extract data in meltano, we need to specify the type of extractor and loader we are dealing with, as the data transfer occurs from a declarative way from specifications held in the meltano.yml config file. To extract the data I chose the tap-csv and tap-postgres packages, considering that they are the source formats.To load data in the local filesystem, I chose the Comma Separated Values(csv) format and the target-csv package (meltanolabs variant), because it has an important feature for our pipeline called file_naming_scheme ({stream_name}- {datestamp}- {timestamp}.csv). It provides a way to write different streams to separate files, such as data sent from different tables in the Northwind postgres database, as an important requirement described in the project challenge.</p>
 You could install all the packages required for load and extract data with the code below.  
-```
+
      meltano add extractor tap-csv tap-postgres  
      meltano add loader target-csv target-postgres  
-```
+
 ## Running jobs:
 You could run the entire pipeline (Extract and load) with this code...
 
