@@ -68,6 +68,8 @@ Things to point out:
 
   -  In a real backfilling pipeline, we need to pass the date inside the source to filter data only for that period.
   -  The option for default replication method may vary depending on requirements for pipelines, like full or incremental load.
+## Creating jobs
+
 ## Running jobs:
 You could run the entire pipeline (Extract and load) with this code...
 
