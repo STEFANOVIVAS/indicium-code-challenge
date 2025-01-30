@@ -33,6 +33,41 @@ You could install all the packages required for load and extract data with the c
      meltano add extractor tap-csv tap-postgres  
      meltano add loader target-csv target-postgres  
 
+## Managing Meltano config file
+After instaling the plug-ins we need to add some fetaures to standard installation in the maltano.yml file to attend some requirementes.
+- tap-postgres plug-in:
+  
+      Insert database northwind connection data.
+      Use stream-maps Capabilities to change table names from public-categories to categories, for example.
+      Use select feature to bring all tables from database (public-*.*)
+- tap-csv--from-csv as an alias for the data comming from csv file:
+  
+      Add file config feature to provide system path, entity, primary keys and delimiter.
+
+- tap-csv plug-in for data comming from postgres data:
+  
+      Add file config feature to provide system path, entity, primary keys and delimiter.
+      Adding parameter $DATE to file path to capture only data for the present day, in a regular daily scheduled pipeline, or any backfiling for past day run.
+      
+- target-postgres plug-in:
+  
+      Insert database warehouse connection data.
+    
+- target-csv--from-postgres as an alias for the CSV files comming from postgres DB:
+    
+      Adding parameter $DATE to file path to write files in the local filesystem only data for the present day, in a regular daily scheduled pipeline, or any backfiling for past day run ($MELTANO_PROJECT_ROOT/output/postgres/{stream_name}/$DATE/{stream_name}.csv)
+  
+      Adding a replace file as an overwrite behavior to guarantee idempotent pipeline behavior in this context.
+- target-csv--order-details as an alias for CSV file comming from order_details file:
+  
+      Adding parameter $DATE to file path to write files in the local filesystem only data for the present day, in a regular daily scheduled pipeline, or any backfiling for past day run ($MELTANO_PROJECT_ROOT/output/csv/{stream_name}/$DATE/{stream_name}.csv)
+  
+      Adding a replace file as an overwrite behavior to guarantee idempotent pipeline behavior in this context.
+    
+Things to point out:
+
+  -  In a real backfilling pipeline, we need to pass the date inside the source to filter data only for that period.
+  -  The option for default replication method may vary depending on requirements for pipelines, like full or incremental load.
 ## Running jobs:
 You could run the entire pipeline (Extract and load) with this code...
 
