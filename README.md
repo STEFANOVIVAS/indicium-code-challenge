@@ -102,7 +102,7 @@ So, in addition to separating the data by date, we can backfill the data to a pa
 
 ## Orchestrate Data
 Most data pipelines aren't run just once, but over and over again, to make sure additions and changes in the source eventually make their way to the destination.
-To help you realize this, Meltano supports scheduled pipelines that can be orchestrated using Apache Airflow.
+To help you realize this, Meltano supports scheduled pipelines that can be orchestrated using Apache Airflow. From meltano's documentation we can see how to add airflow scheduler in our project.
 
     meltano add utility airflow
     meltano invoke airflow:initialize
@@ -121,7 +121,7 @@ When accessing the web server in your browser, you must enter the username and p
 
 ![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/Meltano-Airflow-webserver.png)
 The first DAG is created automatically by airflow when we create a schedule in meltano.
-The second DAG (northwind_meltano_pipeline) was created manually after installing airflow. This task uses the BashOperator to trigger daily jobs created on the Meltano platform, passing the actual date captured from the system as a parameter. (DATE=$(date +%Y-%m-%d).The DAGS were in the './orchestrate/airflow/dags' folder.
+The second DAG (northwind_meltano_pipeline) was created manually after installing airflow. This task uses the BashOperator to trigger daily jobs created on the Meltano platform, passing the actual date captured from the system as a parameter (DATE=$(date +%Y-%m-%d).This way the schedule pipeline will always use the current date as a parameter and so creating folders with the day it was executed. It was created a dependency between tasks in a way that Step 2 depends on both tasks of step 1. The DAGS were stored in the './orchestrate/airflow/dags' folder.
 
 ![](https://github.com/STEFANOVIVAS/indicium-code-challenge/blob/main/meltano-airflow-task.png)
 
